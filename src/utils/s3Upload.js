@@ -64,7 +64,7 @@ export async function S3UploadImage(
   uploadPath
 ) {
   try {
-    // console.log("s3", s3);
+    // console.log("s3", s3); glow
     // console.log("process.env.ID", process.env.ID);
     // console.log("process.env.SECRET_ACCESS_KEY", process.env.SECRET_ACCESS_KEY);
     // console.log("process.env.ACCESS_KEY_ID", process.env.ACCESS_KEY_ID);
@@ -121,7 +121,7 @@ export async function S3UploadImage(
       console.log("Location", Location);
       urlsArray.push(Location);
     }
-    console.log("urlsArray", urlsArray);
+    // console.log("urlsArray", urlsArray);
     urlsArrayObj = urlToDictionary(urlsArray);
     return {
       status: true,
@@ -182,7 +182,7 @@ export async function S3UploadDocument(fileContent, uploadName, key) {
       });
       // Uploading files to the bucket
       s3.upload(params, function (err, data) {
-        console.log("data is ", data, "iteration no. ", i);
+        // console.log("data is ", data, "iteration no. ", i);
         if (err) {
           console.log("reaching error");
           reject(err);
